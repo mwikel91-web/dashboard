@@ -1,0 +1,277 @@
+/* Dashboard Styles */
+a, .bs-nav a {
+  color: #000 !important;
+}
+/* ========== BASE STYLES ========== */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #e9ecef;
+    transition: all 0.3s ease;
+}
+
+/* ========== HEADER ========== */
+.header {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-title {
+    text-align: center;
+    color: #1a1a2e;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+
+/* ========== KPI CARDS ========== */
+.kpi-section {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.kpi-card {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.kpi-label {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.kpi-value {
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ========== FILTERS ========== */
+.filters-section {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.filter-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    border: none;
+}
+
+.filter-header {
+    background-color: #1F4E79;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.filter-dropdown {
+    margin-bottom: 10px;
+}
+
+.theme-switch {
+    margin-left: auto;
+}
+
+/* ========== CHARTS ========== */
+.charts-row {
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.chart-col {
+    padding: 10px;
+}
+
+.chart-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    border: none;
+    height: 100%;
+}
+
+.chart-header {
+    font-weight: bold;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.kpi-card, .chart-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 24px;
+    }
+    
+    .kpi-value {
+        font-size: 20px;
+    }
+    
+    .charts-row {
+        padding: 0 10px;
+    }
+}
+
+/* ========== TABS ========== */
+.custom-tabs {
+    margin: 20px;
+}
+
+.tab-label {
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab-label:hover {
+    background-color: #e9ecef;
+}
+
+.custom-tabs .nav-link.active {
+    /* background-color: #1F4E79; */
+    color: white;
+    /* border-color: #1F4E79; */
+}
+
+/* Плавное появление контента вкладки */
+[id^="tab-content-"] {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+/* Убираем дёргание Loading спиннера */
+._dash-loading {
+    margin: 50px auto;
+    min-height: 60px;
+}
+
+/* ========== DROPDOWN STYLES ========== */
+.Select-control {
+    border-radius: 5px !important;
+}
+
+/* ========== GRAPH STYLES ========== */
+.js-plotly-plot .plotly {
+    border-radius: 8px;
+}
+
+/* ========== ABOUT TAB STYLES ========== */
+.about-header-card {
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    border-radius: 15px !important;
+}
+
+.about-section-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 4px solid #1F4E79;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-section-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.conclusion-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #1F4E79 0%, #2E86AB 100%);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.conclusion-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    height: 100%;
+    transition: all 0.2s;
+}
+
+.conclusion-card:hover {
+    background-color: #e9ecef;
+    border-color: #1F4E79;
+}
+
+.conclusion-card h5 {
+    color: #1a1a2e;
+    font-size: 16px;
+}
+
+.conclusion-card p {
+    margin-top: 10px;
+}
+
+/* Table styles for About tab */
+.about-section-card table {
+    margin-top: 10px;
+}
+
+.about-section-card table td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.about-section-card table tr:hover {
+    background-color: #f8f9fa;
+}
